@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reserva de horas médicas en línea">
+    <title>Centro Médico Salud Integral</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-content">
+            <div>
+                <p class="eyebrow">Atención médica</p>
+                <h1>Centro Médico Salud Integral</h1>
+            </div>
+            <span class="service-badge">
+                <span class="status-dot"></span>
+                Servicio operativo
+            </span>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero" aria-labelledby="page-title">
+            <div>
+                <p class="eyebrow">Reserva en línea</p>
+                <h2 id="page-title">Agenda tu hora médica</h2>
+                <p>
+                    Solicita una atención presencial de forma rápida y sencilla.
+                    La disponibilidad mostrada es referencial.
+                </p>
+            </div>
+        </section>
+
+        <div class="content-grid">
+            <section class="card" aria-labelledby="reservation-title">
+                <div class="card-header">
+                    <div>
+                        <p class="section-label">Formulario</p>
+                        <h2 id="reservation-title">Datos de la reserva</h2>
+                    </div>
+                    <span class="required-note">* Campos obligatorios</span>
+                </div>
+
+                <form action="#" method="post">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="full-name">Nombre completo *</label>
+                            <input type="text"
+                                   id="full-name"
+                                   name="full-name"
+                                   placeholder="Ejemplo: Ana Pérez"
+                                   autocomplete="name"
+                                   required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="document">RUT o documento *</label>
+                            <input type="text"
+                                   id="document"
+                                   name="document"
+                                   placeholder="Ejemplo: 12.345.678-9"
+                                   required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Correo electrónico *</label>
+                            <input type="email"
+                                   id="email"
+                                   name="email"
+                                   placeholder="nombre@correo.cl"
+                                   autocomplete="email"
+                                   required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Teléfono *</label>
+                            <input type="tel"
+                                   id="phone"
+                                   name="phone"
+                                   placeholder="+56 9 1234 5678"
+                                   autocomplete="tel"
+                                   required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="specialty">Especialidad *</label>
+                            <select id="specialty" name="specialty" required>
+                                <option value="">Selecciona una especialidad</option>
+                                <option value="medicina-general">Medicina general</option>
+                                <option value="pediatria">Pediatría</option>
+                                <option value="cardiologia">Cardiología</option>
+                                <option value="dermatologia">Dermatología</option>
+                                <option value="ginecologia">Ginecología</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="professional">Profesional</label>
+                            <select id="professional" name="professional">
+                                <option value="">Cualquier profesional</option>
+                                <option value="profesional-1">Dra. Carolina Morales</option>
+                                <option value="profesional-2">Dr. Felipe González</option>
+                                <option value="profesional-3">Dra. Marcela Rojas</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="date">Fecha preferida *</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="time">Horario preferido *</label>
+                            <select id="time" name="time" required>
+                                <option value="">Selecciona un horario</option>
+                                <option value="09:00">09:00 - 10:00</option>
+                                <option value="10:00">10:00 - 11:00</option>
+                                <option value="11:00">11:00 - 12:00</option>
+                                <option value="15:00">15:00 - 16:00</option>
+                                <option value="16:00">16:00 - 17:00</option>
+                                <option value="17:00">17:00 - 18:00</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="notes">Motivo de consulta</label>
+                            <textarea id="notes"
+                                      name="notes"
+                                      rows="4"
+                                      placeholder="Describe brevemente el motivo de tu consulta"></textarea>
+                        </div>
+
+                        <div class="form-group full-width checkbox-group">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">
+                                Confirmo que los datos ingresados son correctos *
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="primary-button" type="submit">
+                        Solicitar reserva
+                    </button>
+
+                    <p class="form-disclaimer">
+                        Este formulario es demostrativo. No envía información ni guarda datos.
+                    </p>
+                </form>
+            </section>
+
+            <aside class="sidebar">
+                <section class="card info-card" aria-labelledby="service-title">
+                    <div class="card-header">
+                        <div>
+                            <p class="section-label">Información</p>
+                            <h2 id="service-title">Datos de atención</h2>
+                        </div>
+                    </div>
+
+                    <dl class="info-list">
+                        <div>
+                            <dt>Horario de atención</dt>
+                            <dd>Lunes a viernes<br>08:00 a 18:00 horas</dd>
+                        </div>
+                        <div>
+                            <dt>Dirección</dt>
+                            <dd>Av. Providencia 1234<br>Santiago, Chile</dd>
+                        </div>
+                        <div>
+                            <dt>Teléfono</dt>
+                            <dd>+56 2 2345 6789</dd>
+                        </div>
+                        <div>
+                            <dt>Modalidad</dt>
+                            <dd>Atención presencial</dd>
+                        </div>
+                    </dl>
+                </section>
+
+                <section class="card status-card" aria-labelledby="status-title">
+                    <div class="card-header">
+                        <div>
+                            <p class="section-label">Estado</p>
+                            <h2 id="status-title">Estado del servicio</h2>
+                        </div>
+                    </div>
+
+                    <div class="status-content">
+                        <span class="large-status-dot"></span>
+                        <div>
+                            <strong>Operativo</strong>
+                            <p>El servicio está disponible.</p>
+                        </div>
+                    </div>
+
+                    <p class="last-update">Última actualización: hoy, 08:00 horas</p>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Centro Médico Salud Integral · Sitio demostrativo sin conexión a servicios externos</p>
+        </div>
+    </footer>
+</body>
+</html>
